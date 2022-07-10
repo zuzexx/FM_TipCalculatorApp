@@ -3,7 +3,7 @@ let tenBtn = document.getElementById("ten")
 let fifteenBtn = document.getElementById("fifteen")
 let twentyfiveBtn = document.getElementById("twentyfive")
 let fiftyBtn = document.getElementById("fifty")
-let custom = document.getElementById("custom").valueAsNumber
+let custom = document.getElementById("custom")
 let resetBtn = document.getElementById("reset")
 
 fiveBtn.addEventListener("click", function(){
@@ -92,25 +92,26 @@ fiftyBtn.addEventListener("click", function(){
     total.textContent = `$ ${totalPerson}`
 })
 
-/*
+
 custom.addEventListener("blur", function(){
     let bill = document.getElementById("bill").valueAsNumber
     let people = document.getElementById("people").valueAsNumber
     let tip = document.getElementById("tip")
     let total = document.getElementById("total")
+    let cus = custom.valueAsNumber
 
-    let customNum = custom/100
-    let result = Math.round(bill*customNum)
-    let resultPeople = Math.round(result/people)
-    if (resultPeople===0){
-        resultPeople+=1
-    }
-    let onPerson = Math.round(bill/people)
-    let totalPerson = Math.round(onPerson + resultPeople)
+    let customNum = cus/100
+    let result = bill*customNum
+    let resultPeople = result/people
+    let onPerson = bill/people
+    let totalPerson = onPerson + resultPeople
+    resultPeople=(resultPeople).toFixed(2)
+    totalPerson=(totalPerson).toFixed(2)
+
     tip.textContent=`$ ${resultPeople} `
     total.textContent = `$ ${totalPerson}`
 
-})*/
+})
 
 resetBtn.addEventListener("click", function(){
     let bill = document.getElementById("bill")

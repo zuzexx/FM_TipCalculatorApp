@@ -141,20 +141,22 @@ button:focus {
 #custom {
   border: none;
   border-radius: 8px;
-  padding: 5px;
+  padding: 10px;
   font-size: 24px;
   font-weight: 700;
-  width: 25vw;
+  width: 22vw;
   font-family: "Space Mono", monospace;
   background-color: hsl(189deg, 41%, 97%);
   color: hsl(184deg, 14%, 56%);
+  margin-left: -2px;
 }
 #custom:focus {
   outline: solid 2px hsl(172deg, 67%, 45%);
 }
 @media (min-width: 800px) {
   #custom {
-    width: 20vw;
+    width: 18vw;
+    padding: 2px;
   }
 }
 @media (min-width: 1080px) {

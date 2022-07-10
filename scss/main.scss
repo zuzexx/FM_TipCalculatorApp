@@ -154,18 +154,20 @@ button{
 #custom{
     border:none;
     border-radius: 8px;
-    padding: 5px;
+    padding: 10px;
     font-size: $font-size;
     font-weight: $font-weight;
-    width: 25vw;
+    width: 22vw;
     font-family: $font-family;
     background-color: $very-light-grayish-cyan;
     color: $grayish-cyan;
+    margin-left: -2px;
     &:focus{
         outline:solid 2px $strong-cyan;
     }
     @include tablet(){
-        width: 20vw;
+        width: 18vw;
+        padding: 2px;
     }
     @include desktop(){
         width: 10vw;

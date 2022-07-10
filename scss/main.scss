@@ -132,10 +132,11 @@ input{
     justify-content: center;
     @include tablet(){
         grid-template-columns: auto auto auto;
-        gap:20px;
+        gap:10px;
+        width:60vw;
     }
     @include desktop(){
-        margin-left: -22vw;
+        margin-left: -13vw;
         gap:7px;
     }
 }

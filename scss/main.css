@@ -100,12 +100,13 @@ input:required:invalid {
 @media (min-width: 800px) {
   #grid {
     grid-template-columns: auto auto auto;
-    gap: 20px;
+    gap: 10px;
+    width: 60vw;
   }
 }
 @media (min-width: 1080px) {
   #grid {
-    margin-left: -22vw;
+    margin-left: -13vw;
     gap: 7px;
   }
 }

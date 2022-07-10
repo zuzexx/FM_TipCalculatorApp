@@ -178,8 +178,9 @@ button:focus {
 @media (min-width: 1080px) {
   #reset {
     width: 23vw;
-    height: 7vh;
-    margin-top: 120px;
+    height: 8vh;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 

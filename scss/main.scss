@@ -208,6 +208,9 @@ p{
     margin-left:$margin-left;
     padding-top: 10px;
     color:$white;
+    @include desktop(){
+    padding-top: 50px;
+}
 }
 span{
     font-size: 10px;
@@ -217,6 +220,7 @@ span{
     @include amounts();
     @include desktop(){
         margin-right: -10vw;
+        padding-top: 50px;
     }
 }
 
@@ -224,5 +228,6 @@ span{
     @include amounts();
     @include desktop(){
         margin-right: -10vw;
+        padding-top: 50px;
     }
 }

@@ -207,6 +207,11 @@ p {
   padding-top: 10px;
   color: hsl(0deg, 0%, 100%);
 }
+@media (min-width: 1080px) {
+  p {
+    padding-top: 50px;
+  }
+}
 
 span {
   font-size: 10px;
@@ -224,6 +229,7 @@ span {
 @media (min-width: 1080px) {
   #total {
     margin-right: -10vw;
+    padding-top: 50px;
   }
 }
 
@@ -238,5 +244,6 @@ span {
 @media (min-width: 1080px) {
   #tip {
     margin-right: -10vw;
+    padding-top: 50px;
   }
 }/*# sourceMappingURL=main.css.map */

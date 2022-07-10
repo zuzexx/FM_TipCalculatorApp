@@ -68,6 +68,12 @@ input {
   margin-right: 5px;
   padding: 3px;
 }
+input:focus {
+  outline: solid 2px hsl(172deg, 67%, 45%);
+}
+input:required:invalid {
+  outline: solid 2px red;
+}
 @media (min-width: 800px) {
   input {
     width: 60vw;
@@ -117,7 +123,7 @@ button {
   cursor: pointer;
 }
 button:focus {
-  background-color: hsl(172deg, 67%, 45%);
+  background-color: hsl(185deg, 41%, 84%);
   color: hsl(183deg, 100%, 15%);
 }
 @media (min-width: 800px) {
@@ -142,6 +148,9 @@ button:focus {
   background-color: hsl(189deg, 41%, 97%);
   color: hsl(184deg, 14%, 56%);
 }
+#custom:focus {
+  outline: solid 2px hsl(172deg, 67%, 45%);
+}
 @media (min-width: 800px) {
   #custom {
     width: 20vw;
@@ -159,6 +168,9 @@ button:focus {
   color: hsl(183deg, 100%, 15%);
   margin-left: 28px;
   margin-bottom: 20px;
+}
+#reset:focus {
+  background-color: hsl(185deg, 41%, 84%);
 }
 @media (min-width: 1080px) {
   #reset {

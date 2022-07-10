@@ -26,7 +26,7 @@
 }
 
 @mixin buttonActive(){
-    background-color: $strong-cyan;
+    background-color: $light-grayish-cyan;
     color: $very-dark-cyan;
 }
 
@@ -43,6 +43,12 @@
     text-align: right;
     margin-right: 5px;
     padding:3px;
+    &:focus{
+        outline:solid 2px $strong-cyan;
+    }
+    &:required:invalid{
+        outline:solid 2px red;
+    }
 }
 
 @mixin tablet(){
@@ -154,6 +160,9 @@ button{
     font-family: $font-family;
     background-color: $very-light-grayish-cyan;
     color: $grayish-cyan;
+    &:focus{
+        outline:solid 2px $strong-cyan;
+    }
     @include tablet(){
         width: 20vw;
     }
@@ -167,6 +176,9 @@ button{
     color: $very-dark-cyan;
     margin-left: $margin-left;
     margin-bottom: 20px;
+    &:focus{
+        background-color: $light-grayish-cyan;
+    }
     @include desktop(){
         width:23vw;
         height: 7vh;

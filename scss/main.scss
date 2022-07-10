@@ -30,36 +30,9 @@
     color: $very-dark-cyan;
 }
 
-body{
-    background-color: $light-grayish-cyan;
-    font-family: $font-family;
-    color: $dark-grayish-cyan;
-    display:flex;
-    height:100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15vh;
-}
-img{
-    position: absolute;
-    margin-top: -55vh;
-}
-main{
-    text-align: left;
-    background-color: $white;
-    width:90vw;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    height: 100vh;
-}
-h1{
-    margin-left: $margin-left;
-    font-size:15px;
-    padding-top: 25px;
-}
-input{
+@mixin inputStyle(){
     margin-left:$margin-left;
+    border-radius: 5px;
     width:80vw;
     background-color: $very-light-grayish-cyan;
     border:none;
@@ -71,6 +44,79 @@ input{
     margin-right: 5px;
     padding:3px;
 }
+
+@mixin tablet(){
+    @media(min-width:$tablet){
+        @content;
+    }
+}
+@mixin desktop(){
+    @media(min-width:$desktop){
+        @content;
+    }
+}
+
+body{
+    background-color: $light-grayish-cyan;
+    font-family: $font-family;
+    color: $dark-grayish-cyan;
+    display:flex;
+    height:100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+}
+#logo{
+    position: absolute;
+    margin-top: -55vh;
+    @include desktop{
+        margin-top: -40px;
+    }
+}
+main{
+    text-align: left;
+    background-color: $white;
+    width:90vw;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 100vh;
+
+    @include tablet(){
+        border-radius: 20px;
+        //background-color: red;
+       
+    }
+    @include desktop(){
+        //background-color: black;
+        width:65vw;
+        height: 60vh;
+        position:absolute;
+        margin-left: -35vw;
+        margin-top:50px;
+    }
+}
+h1{
+    margin-left: $margin-left;
+    font-size:15px;
+    padding-top: 25px;
+    @include desktop(){
+        padding-top: 45px;
+    }
+}
+input{
+    @include inputStyle();
+    @include tablet(){
+        width:60vw;
+        height: 40px;
+    }
+    @include desktop(){
+        width:30vw;
+    }
+}
+/*#bill{
+    background-image: url(images/icon-dollar.svg) no-repeat left 5px center;
+}*/
 #grid{
     display:grid;
     gap:10px;
@@ -78,9 +124,24 @@ input{
     width: 80vw;
     margin-left: $margin-left;
     justify-content: center;
+    @include tablet(){
+        grid-template-columns: auto auto auto;
+        gap:20px;
+    }
+    @include desktop(){
+        margin-left: -22vw;
+        gap:7px;
+    }
 }
 button{
     @include buttonStyle();
+    @include tablet(){
+        width: 20vw;
+    }
+    @include desktop(){
+        width: 10vw;
+        
+    }
 }
 
 #custom{
@@ -93,6 +154,12 @@ button{
     font-family: $font-family;
     background-color: $very-light-grayish-cyan;
     color: $grayish-cyan;
+    @include tablet(){
+        width: 20vw;
+    }
+    @include desktop(){
+        width: 10vw;
+    }
 }
 #reset{
     width:70vw;
@@ -100,6 +167,11 @@ button{
     color: $very-dark-cyan;
     margin-left: $margin-left;
     margin-bottom: 20px;
+    @include desktop(){
+        width:23vw;
+        height: 7vh;
+        margin-top: 120px;
+    }
 }
 #container{
     background-color: $very-dark-cyan;
@@ -109,6 +181,13 @@ button{
     display:grid;
     grid-template-columns: auto auto;
     margin-top: 30px;
+    @include desktop(){
+        float:right;
+        width: 27vw;
+        height: 53vh;
+        margin-top: -40vh;
+        margin-right: 20PX;
+    }
 }
 p{
     margin-left:$margin-left;
@@ -121,8 +200,14 @@ span{
 }
 #total{
     @include amounts();
+    @include desktop(){
+        margin-right: -10vw;
+    }
 }
 
 #tip{
     @include amounts();
+    @include desktop(){
+        margin-right: -10vw;
+    }
 }

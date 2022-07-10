@@ -10,9 +10,14 @@ body {
   margin-top: 15vh;
 }
 
-img {
+#logo {
   position: absolute;
   margin-top: -55vh;
+}
+@media (min-width: 1080px) {
+  #logo {
+    margin-top: -40px;
+  }
 }
 
 main {
@@ -23,15 +28,35 @@ main {
   border-top-right-radius: 20px;
   height: 100vh;
 }
+@media (min-width: 800px) {
+  main {
+    border-radius: 20px;
+  }
+}
+@media (min-width: 1080px) {
+  main {
+    width: 65vw;
+    height: 60vh;
+    position: absolute;
+    margin-left: -35vw;
+    margin-top: 50px;
+  }
+}
 
 h1 {
   margin-left: 28px;
   font-size: 15px;
   padding-top: 25px;
 }
+@media (min-width: 1080px) {
+  h1 {
+    padding-top: 45px;
+  }
+}
 
 input {
   margin-left: 28px;
+  border-radius: 5px;
   width: 80vw;
   background-color: hsl(189deg, 41%, 97%);
   border: none;
@@ -43,7 +68,21 @@ input {
   margin-right: 5px;
   padding: 3px;
 }
+@media (min-width: 800px) {
+  input {
+    width: 60vw;
+    height: 40px;
+  }
+}
+@media (min-width: 1080px) {
+  input {
+    width: 30vw;
+  }
+}
 
+/*#bill{
+    background-image: url(images/icon-dollar.svg) no-repeat left 5px center;
+}*/
 #grid {
   display: grid;
   gap: 10px;
@@ -51,6 +90,18 @@ input {
   width: 80vw;
   margin-left: 28px;
   justify-content: center;
+}
+@media (min-width: 800px) {
+  #grid {
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+  }
+}
+@media (min-width: 1080px) {
+  #grid {
+    margin-left: -22vw;
+    gap: 7px;
+  }
 }
 
 button {
@@ -69,6 +120,16 @@ button:focus {
   background-color: hsl(172deg, 67%, 45%);
   color: hsl(183deg, 100%, 15%);
 }
+@media (min-width: 800px) {
+  button {
+    width: 20vw;
+  }
+}
+@media (min-width: 1080px) {
+  button {
+    width: 10vw;
+  }
+}
 
 #custom {
   border: none;
@@ -81,6 +142,16 @@ button:focus {
   background-color: hsl(189deg, 41%, 97%);
   color: hsl(184deg, 14%, 56%);
 }
+@media (min-width: 800px) {
+  #custom {
+    width: 20vw;
+  }
+}
+@media (min-width: 1080px) {
+  #custom {
+    width: 10vw;
+  }
+}
 
 #reset {
   width: 70vw;
@@ -88,6 +159,13 @@ button:focus {
   color: hsl(183deg, 100%, 15%);
   margin-left: 28px;
   margin-bottom: 20px;
+}
+@media (min-width: 1080px) {
+  #reset {
+    width: 23vw;
+    height: 7vh;
+    margin-top: 120px;
+  }
 }
 
 #container {
@@ -98,6 +176,15 @@ button:focus {
   display: grid;
   grid-template-columns: auto auto;
   margin-top: 30px;
+}
+@media (min-width: 1080px) {
+  #container {
+    float: right;
+    width: 27vw;
+    height: 53vh;
+    margin-top: -40vh;
+    margin-right: 20PX;
+  }
 }
 
 p {
@@ -119,6 +206,11 @@ span {
   color: hsl(172deg, 67%, 45%);
   margin-left: -20vw;
 }
+@media (min-width: 1080px) {
+  #total {
+    margin-right: -10vw;
+  }
+}
 
 #tip {
   text-align: center;
@@ -127,4 +219,9 @@ span {
   font-weight: 700;
   color: hsl(172deg, 67%, 45%);
   margin-left: -20vw;
+}
+@media (min-width: 1080px) {
+  #tip {
+    margin-right: -10vw;
+  }
 }/*# sourceMappingURL=main.css.map */

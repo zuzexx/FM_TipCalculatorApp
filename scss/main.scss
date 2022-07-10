@@ -1,0 +1,128 @@
+@import "./variables";
+
+@mixin buttonStyle(){
+    border:none;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    width: 25vw;
+    font-family: $font-family;
+    background-color: $very-dark-cyan;
+    color: $very-light-grayish-cyan;
+    cursor: pointer;
+    &:focus{
+        @include buttonActive()
+    }
+}
+
+@mixin amounts(){
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: $font-weight;
+    color:$strong-cyan;
+    margin-left:-20vw;
+}
+
+@mixin buttonActive(){
+    background-color: $strong-cyan;
+    color: $very-dark-cyan;
+}
+
+body{
+    background-color: $light-grayish-cyan;
+    font-family: $font-family;
+    color: $dark-grayish-cyan;
+    display:flex;
+    height:100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+}
+img{
+    position: absolute;
+    margin-top: -55vh;
+}
+main{
+    text-align: left;
+    background-color: $white;
+    width:90vw;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 100vh;
+}
+h1{
+    margin-left: $margin-left;
+    font-size:15px;
+    padding-top: 25px;
+}
+input{
+    margin-left:$margin-left;
+    width:80vw;
+    background-color: $very-light-grayish-cyan;
+    border:none;
+    height: 30px;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $very-dark-cyan;
+    text-align: right;
+    margin-right: 5px;
+    padding:3px;
+}
+#grid{
+    display:grid;
+    gap:10px;
+    grid-template-columns: auto auto;
+    width: 80vw;
+    margin-left: $margin-left;
+    justify-content: center;
+}
+button{
+    @include buttonStyle();
+}
+
+#custom{
+    border:none;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    width: 25vw;
+    font-family: $font-family;
+    background-color: $very-light-grayish-cyan;
+    color: $grayish-cyan;
+}
+#reset{
+    width:70vw;
+    background-color: $strong-cyan;
+    color: $very-dark-cyan;
+    margin-left: $margin-left;
+    margin-bottom: 20px;
+}
+#container{
+    background-color: $very-dark-cyan;
+    width: 80vw;
+    border-radius: 20px;
+    margin-left: $margin-left;
+    display:grid;
+    grid-template-columns: auto auto;
+    margin-top: 30px;
+}
+p{
+    margin-left:$margin-left;
+    padding-top: 10px;
+    color:$white;
+}
+span{
+    font-size: 10px;
+    color:$very-light-grayish-cyan;
+}
+#total{
+    @include amounts();
+}
+
+#tip{
+    @include amounts();
+}

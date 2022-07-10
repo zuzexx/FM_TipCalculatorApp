@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,700&display=swap');
+    </style>
+    <link rel="stylesheet" href="scss/main.css">
   
   <title>Frontend Mentor | Tip calculator app</title>
 
@@ -16,29 +20,42 @@
 </head>
 <body>
 
-  Bill
+  <img src="images/logo.svg" alt="splitter logo">
+  <div id="main-container">
+    <main>
+ <h1> Bill</h1>
+ <img src="images/icon-dollar.svg" alt="a grey dollar sign">
+ <input type="number" name="bill" id="bill">
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+ <h1> Select Tip %</h1>
+ <div id="grid">
+ <button id="five">5%</button> 
+ <button id="ten">10%</button> 
+ <button id="fifteen">15%</button> 
+ <button id="twentyfive">25%</button> 
+ <button id="fifty">50%</button> 
+ <button id="custom">Custom</button> </div>
 
-  Number of People
+ <h1> Number of People</h1>
+ <img src="images/icon-person.svg" alt="a grey styalized person icon">
+ <input type="number" name="people" id="people">
 
-  Tip Amount
-  / person
+<div id="container">
+ <p> Tip Amount<br>
+ <span> / person</span></p>
+  <div id="tip">0000</div>
 
-  Total
-  / person
+  <p> Total<br>
+    <span> / person</span></p>
+  <div id="total">0000</div>
 
-  Reset
+ <button id="reset"> Reset</button></div>
   
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        Coded by <a href="https://github.com/zuzexx">Zuzexx</a>.
+  </footer></div>
+  </main>
 </body>
+<script src="script.js"></script>
 </html>

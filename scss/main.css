@@ -46,11 +46,11 @@ main {
 h1 {
   margin-left: 28px;
   font-size: 15px;
-  padding-top: 25px;
+  margin-top: 45px;
 }
 @media (min-width: 1080px) {
   h1 {
-    padding-top: 45px;
+    padding-top: 25px;
   }
 }
 
@@ -102,12 +102,14 @@ input:required:invalid {
     grid-template-columns: auto auto auto;
     gap: 10px;
     width: 60vw;
+    margin-bottom: 45px;
   }
 }
 @media (min-width: 1080px) {
   #grid {
     margin-left: -13vw;
     gap: 7px;
+    margin-bottom: 45px;
   }
 }
 

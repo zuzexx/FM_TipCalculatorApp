@@ -5,6 +5,8 @@ let twentyfiveBtn = document.getElementById("twentyfive")
 let fiftyBtn = document.getElementById("fifty")
 let custom = document.getElementById("custom")
 let resetBtn = document.getElementById("reset")
+/*let tipBtn = document.querySelectorAll(".tip_btn")*/
+
 
 fiveBtn.addEventListener("click", function(){
     let bill = document.getElementById("bill").valueAsNumber
